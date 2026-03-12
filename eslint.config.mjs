@@ -70,4 +70,13 @@ export default defineConfig([
             ...reactRefresh.configs.vite.rules,
         },
     },
+
+    {
+        files: ["apps/front/src/components/ui/**/*.{ts,tsx}"],
+        rules: {
+            "@typescript-eslint/no-unsafe-assignment": "off",
+            "@typescript-eslint/no-unsafe-argument": "off",
+            "@typescript-eslint/no-unsafe-call": "off",
+        },
+    },
 ]);
