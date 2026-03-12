@@ -5,7 +5,6 @@ import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
 import { defineConfig, globalIgnores } from "eslint/config";
-import next from "@next/eslint-plugin-next";
 
 export default defineConfig([
     globalIgnores(["**/dist/**", "**/node_modules/**", "**/.next/**", "**/coverage/**"]),
@@ -69,22 +68,6 @@ export default defineConfig([
         rules: {
             ...reactHooks.configs.flat.recommended.rules,
             ...reactRefresh.configs.vite.rules,
-        },
-    },
-
-    {
-        files: ["apps/next_site/**/*.{ts,tsx}"],
-        plugins: {
-            "@next/next": next,
-        },
-        languageOptions: {
-            globals: {
-                ...globals.browser,
-                ...globals.node,
-            },
-        },
-        rules: {
-            ...next.configs["core-web-vitals"].rules,
         },
     },
 ]);
