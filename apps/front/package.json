@@ -8,7 +8,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint \"**/*.{ts,tsx}\"",
     "lint:css": "stylelint \"src/**/*.{css,scss,sass}\"",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@card-game/shared-contracts": "workspace:*",
