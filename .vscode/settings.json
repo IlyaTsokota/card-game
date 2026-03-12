@@ -1,0 +1,8 @@
+{
+    "stylelint.enable": true,
+    "stylelint.validate": ["css", "scss", "sass", "postcss", "tailwindcss"],
+    "stylelint.packageManager": "pnpm",
+    "eslint.workingDirectories": [
+        { "mode": "auto" }
+    ]
+}
