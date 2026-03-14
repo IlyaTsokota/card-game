@@ -1,0 +1,27 @@
+ROOMS
+
+1. Room Service (
+    create room,
+    join room, 
+    get room, 
+    delete room (only creator), 
+    start room, 
+    remove player, 
+    genRoomId
+)
+2. Room Gateway (room:create, room:join, room:start, room:delete)
+3. Game service (
+    start, 
+    stop, 
+    last chance, 
+    draw card from deck, 
+    draw card from discard pile 1 - 2, 
+    play combinations and effect,
+    checkEnd,
+    end
+)
+4. Game Gateway
+
+
+PS: PARALLEL CREATED UI
+

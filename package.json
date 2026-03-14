@@ -4,7 +4,12 @@
   "version": "1.0.0",
   "packageManager": "pnpm@10.32.1",
   "scripts": {
-    "dev": "pnpm -r --parallel --stream --filter ./apps/** run dev",
+    "dev:packages:build": "pnpm -r --filter ./packages/** run build",
+    "dev:packages": "pnpm -r --parallel --stream --filter ./packages/** run dev",
+    "dev:apps": "pnpm -r --parallel --stream --filter ./apps/** run dev",
+    "dev:all": "concurrently -k -n PACKAGES,APPS \"pnpm run dev:packages\" \"pnpm run dev:apps\"",
+    "dev": "pnpm run dev:packages:build && pnpm run dev:all",
+
     "build": "pnpm -r run build",
     "test": "pnpm -r run test",
     "lint": "pnpm -r run lint",
@@ -26,6 +31,7 @@
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@stylistic/stylelint-plugin": "^5.0.1",
+    "concurrently": "^9.2.1",
     "eslint": "^10.0.3",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-next": "^0.0.0",

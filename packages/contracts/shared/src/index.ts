@@ -1,2 +1,1 @@
-export * from "./schemas/room.schema";
-export * from "./types";
+export * from "./types/index.js";

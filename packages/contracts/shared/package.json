@@ -8,6 +8,7 @@
   "private": true,
   "scripts": {
     "build": "rm -rf dist && tsc",
+    "dev": "tsc -p tsconfig.json -w --preserveWatchOutput",
     "typecheck": "tsc --noEmit"
   },
   "files": [
